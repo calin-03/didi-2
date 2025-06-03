@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secret Message</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            if(password === "HORAȚIU") {
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Wrong password, please try again!(daca mai gresesti sugi pula)");
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #message {
+            display: none;
+            color: green;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h2>Enter Password</h2>
+        <input type="password" id="passwordInput">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+    <div id="message">
+        Felicitări din toată inima…
+        Bosulică e acum un Boss adevărat și sunt măndru ca ești prietenul meu! #MYLITTLEEINSTEIN
+    </div>
+</body>
+</html>
